@@ -5,20 +5,24 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
-    letter-spacing: 1px;
+}
+
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 130vh;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     margin: 0;
+    padding: 0;
+    height: 100vh;
+    margin-top: 65px;
 }
 
 .navbar {
@@ -71,7 +75,7 @@ body
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px; 
     border-radius: 50%;
@@ -91,12 +95,12 @@ body
 
 .cards-container {
   display: flex;
-  flex-direction: column; /* Make the two .cards vertical */
-  align-items: center; /* Center the .cards horizontally */
+  flex-direction: column;
+  align-items: center;
 }
 
 .cards {
-  max-width: 1100px;
+  max-width: 90%;
   margin: 0 auto;
   text-align: center;
   padding: 30px;
@@ -134,6 +138,14 @@ body
   }
 }
 
-hr{
-  height: 1px;
+hr {
+  margin: 0;
+  width: 100%; 
+}
+
+
+.pics img {
+  width: 100px;
+  height: auto; 
+  border-radius: 50%;
 }

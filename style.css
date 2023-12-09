@@ -5,20 +5,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
-    letter-spacing: 1px;
+}
+
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .navbar {
@@ -71,7 +74,7 @@ body
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px; 
     border-radius: 50%;
@@ -89,7 +92,6 @@ body
     100% { transform: rotate(360deg); }
 }
 
-/* Credits Here : https://codepen.io/marcell0lopes/pen/oNemQmB --> */
 .main{
   height:100vh;
   width:100%;  
@@ -186,7 +188,6 @@ h1{
   }
 }
 }
-  /* Credits : https://codepen.io/alvarotrigo/pen/RwYYBZP */
 
 @-webkit-keyframes bg-scrolling-reverse {
     100% {
