@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunigto+Sans:opsz@6..12&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Space+Mono&display=swap');
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
-    letter-spacing: 1px;
+}
+
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     margin: 0;
+    padding: 0;
+    height: 100vh;
+    margin-top: 65px;
 }
 
 .navbar {
@@ -71,10 +75,10 @@ body
 }
 
 .logo {
-    position: absolute;
-    top: 10px; 
+    position: fixed;
+    top: 10px;
     left: 10px; 
-    border-radius: 50%; 
+    border-radius: 50%;
     z-index: 2;
     width: 45px;
 }
@@ -87,4 +91,61 @@ body
 @keyframes wave-flag {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  flex-direction: column;
+  display: flex;
+}
+
+.services {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.content > * {
+  flex: 1 1 100%;
+}
+
+.cards:nth-child(2){
+  margin-top: -55px;
+}
+
+@media (max-width: 900px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+hr {
+  margin: 0;
+  width: 85%; 
+}
+
+
+.pics img {
+  width: 100px;
+  height: auto; 
+  border-radius: 50%;
 }
