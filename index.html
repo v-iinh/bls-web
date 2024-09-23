@@ -1,30 +1,331 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>BLS Web Development</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link href="img/logo/favicon.ico" rel="icon">
-</head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html" style="color: #A8DADC;">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="https://docs.google.com/forms/d/13NupHW2ZiYjLk18UHCy2voDZZXNqEpBbzKxeUeEziDQ/edit">Join</a></li>
-        </ul>
-    </nav>
-    <div class="main">
-        <h1><strong>You should join : </strong><div class="roller">
-          <span id="rolltext">BLS<br/>
-          Web<br/>
-          Development<br/>
-          <span id="spare-time">right now</span><br/>
-          </div>
-        </h1>
-    </div>
-    <script src="main.js"></script>
-</body> 
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>BLS Web Development</title>
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+      <link rel="stylesheet" href="styles/noise.css">
+      <link rel="stylesheet" href="styles/macos.css">
+   </head>
+   <body>
+      <section>
+         <div class="icon-container">
+            <div class="icon-box about" data-modal="about">
+               <i class="fa-regular fa-address-card"></i>
+            </div>
+            <div class="icon-box projects" data-modal="projects">
+               <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="icon-box testimonial" data-modal="testimonial">
+               <i class="fa-solid fa-users-rectangle"></i>
+            </div>
+            <div class="icon-box contact" data-modal="contact">
+               <i class="fa-solid fa-envelope"></i>
+            </div>
+         </div>
+      </section>
+      <div class="popup" id="about">
+         <div class="popup-container">
+            <div class="popup-header">
+               <div class="button-container">
+                  <button class="close-btn circle-btn red">
+                  <i class="fa-solid fa-xmark"></i>
+                  </button>
+                  <button class="close-btn circle-btn yellow">
+                  <i class="fa-solid fa-window-minimize"></i>
+                  </button>
+                  <button class="maximize-btn circle-btn green">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="popup-body about-container">
+               <div class="img-frame">
+                  <img
+                     src="assets/intro.png" />
+               </div>
+               <div class="hero-content">
+                  <h1>BLS Web Development</h1>
+                  <p>
+                     The Boston Latin School Web Development Club is a space for BLS scholars to explore and learn about front-end web development. A revival of the original web development club, which ceased operations after senior members graduated, our hope is to provide the resources necessary for scholars to build their own portfolios, games, websites, and ultimately, to act as a community that collaborates to educate students about web development. Whether you are a complete beginner or an experienced programmer, all are welcome!
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="popup" id="projects">
+         <div class="popup-container">
+            <div class="popup-header">
+               <div class="button-container">
+                  <button class="close-btn circle-btn red">
+                  <i class="fa-solid fa-xmark"></i>
+                  </button>
+                  <button class="close-btn circle-btn yellow">
+                  <i class="fa-solid fa-window-minimize"></i>
+                  </button>
+                  <button class="maximize-btn circle-btn green">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="popup-body">
+               <div class="skill-list">
+                  <h1>Skills You Can Learn</h1>
+                  <ul>
+                     <li>HTML5</li>
+                     <li>CSS3</li>
+                     <li>Javascript</li>
+                     <li>React</li>
+                     <li>Bootstrap</li>
+                     <li>Tailwind CSS</li>
+                  </ul>
+               </div>
+               <div class="project-container">
+                  <h1>Community Showcase</h1>
+                  <div class="all-projects">
+                     <div class="project-box">
+                        <img
+                           src="assets/community/vinh_portfolio.png"
+                           alt="" />
+                        <div class="overlay">
+                           <h3>Vinh's Portfolio</h3>
+                           <button class="more-btn">
+                           <span>Learn More</span>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="project-box">
+                        <img
+                           src="assets/placeholder.png"
+                           alt="" />
+                        <div class="overlay">
+                           <h3>Coming Soon</h3>
+                           <button class="more-btn">
+                           <span>Learn More</span>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="project-box">
+                        <img
+                           src="assets/placeholder.png"
+                           alt="" />
+                        <div class="overlay">
+                           <h3>Coming Soon</h3>
+                           <button class="more-btn">
+                           <span>Learn More</span>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="project-box">
+                        <img
+                           src="assets/placeholder.png"
+                           alt="" />
+                        <div class="overlay">
+                           <h3>Coming Soon</h3>
+                           <button class="more-btn">
+                           <span>Learn More</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="popup" id="testimonial">
+         <div class="popup-container">
+            <div class="popup-header">
+               <div class="button-container">
+                  <button class="close-btn circle-btn red">
+                  <i class="fa-solid fa-xmark"></i>
+                  </button>
+                  <button class="close-btn circle-btn yellow">
+                  <i class="fa-solid fa-window-minimize"></i>
+                  </button>
+                  <button class="maximize-btn circle-btn green">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="popup-body testimonial-container">
+               <h1>Meet the Team</h1>
+               <div class="slider-container">
+                  <div class="swiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <div class="user-info">
+                              <img
+                                 src="assets/officers/vinh.png"
+                                 alt="" />
+                              <h2>Vinh Tran</h2>
+                           </div>
+                           <p>
+                              President, Class of 2025
+                           </p>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="user-info">
+                              <img
+                                 src="assets/officers/william.png"
+                                 alt="" />
+                              <h2>William Liang</h2>
+                           </div>
+                           <p>
+                              Vice-President, Class of 2025
+                           </p>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="user-info">
+                              <img
+                                 src="assets/officers/simon.png"
+                                 alt="" />
+                              <h2>Simon Ha</h2>
+                           </div>
+                           <p>
+                              Officer, Class of 2025
+                           </p>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                           <div class="user-info">
+                              <img
+                                 src="assets/officers/jiebin.png"
+                                 alt="" />
+                              <h2>Jiebin Fang</h2>
+                           </div>
+                           <p>
+                              Officer, Class of 2025
+                           </p>
+                        </div>
+                     </div>
+                     <ul class="control" id="custom-control">
+                        <li class="prev">
+                           <ion-icon class="arrow" name="caret-back-outline"></ion-icon>
+                        </li>
+                        <li class="next">
+                           <ion-icon
+                              class="arrow"
+                              name="caret-forward-outline"></ion-icon>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="popup" id="contact">
+         <div class="popup-container">
+            <div class="popup-header">
+               <div class="button-container">
+                  <button class="close-btn circle-btn red">
+                  <i class="fa-solid fa-xmark"></i>
+                  </button>
+                  <button class="close-btn circle-btn yellow">
+                  <i class="fa-solid fa-window-minimize"></i>
+                  </button>
+                  <button class="maximize-btn circle-btn green">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+               </div>
+            </div>
+            <div class="popup-body contact-container">
+               <h1>Contact</h1>
+               <p>Hi there, contact us via email.</p>
+               <form>
+                  <label for="name">Name</label>
+                  <input
+                     type="text"
+                     id="name"
+                     name="name"
+                     placeholder="Your Name" />
+                  <label for="email">Email</label>
+                  <input
+                     type="text"
+                     id="email"
+                     name="email"
+                     placeholder="Your Mail" />
+                  <label for="subject">Subject</label>
+                  <textarea
+                     id="subject"
+                     name="subject"
+                     placeholder="Write a Message"
+                     style="height: 200px"></textarea>
+                  <button class="submit-btn more-btn" type="submit">
+                  <span>Submit <i class="fa-solid fa-paper-plane"></i></span>
+                  </button>
+               </form>
+            </div>
+         </div>
+      </div>
+      <canvas id="neuro"></canvas>
+      <script type="x-shader/x-fragment" id="vertShader">
+         precision mediump float;
+         
+         varying vec2 vUv;
+         attribute vec2 a_position;
+         
+         void main() {
+             vUv = .5 * (a_position + 1.);
+             gl_Position = vec4(a_position, 0.0, 1.0);
+         }
+      </script>
+      <script type="x-shader/x-fragment" id="fragShader">
+         precision mediump float;
+         
+         varying vec2 vUv;
+         uniform float u_time;
+         uniform float u_ratio;
+         uniform vec2 u_pointer_position;
+         
+         vec2 rotate(vec2 uv, float th) {
+             return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+         }
+         
+         float neuro_shape(vec2 uv, float t, float p) {
+             vec2 sine_acc = vec2(0.);
+             vec2 res = vec2(0.);
+             float scale = 8.;
+         
+             for (int j = 0; j < 15; j++) {
+                 uv = rotate(uv, 1.);
+                 sine_acc = rotate(sine_acc, 1.);
+                 vec2 layer = uv * scale + float(j) + sine_acc - t;
+                 sine_acc += sin(layer);
+                 res += (.5 + .5 * cos(layer)) / scale;
+                 scale *= (1.2 - .07 * p);
+             }
+             return res.x + res.y;
+         }
+         
+         void main() {
+             vec2 uv = .5 * vUv;
+             uv.x *= u_ratio;
+         
+             vec2 pointer = vUv - u_pointer_position;
+             pointer.x *= u_ratio;
+             float p = clamp(length(pointer), 0., 1.);
+             p = .5 * pow(1. - p, 2.);
+         
+             float t = .001 * u_time;
+             vec3 color = vec3(0.);
+         
+             float noise = neuro_shape(uv, t, p);
+         
+             noise = 1.2 * pow(noise, 3.);
+             noise += pow(noise, 10.);
+             noise = max(.0, noise - .5);
+             noise *= (1. - length(vUv - .5));
+         
+             color = normalize(vec3(.7, .2, .8 + .5));
+         
+             color = color * noise;
+         
+             gl_FragColor = vec4(color, noise);
+         }
+      </script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="scripts/noise.js"></script>
+      <script src="scripts/macos.js"></script>
+   </body>
 </html>
