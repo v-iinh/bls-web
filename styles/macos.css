@@ -18,7 +18,7 @@ ul {
 }
 
 h1 {
-	font-family: "Marhey", sans-serif;
+	font-weight: bolder;
 	font-size: clamp(1.9rem, 2vw, 3rem);
 	opacity: 0;
 	animation: title 1.1s ease 0.3s 1 normal forwards;
@@ -50,9 +50,6 @@ section {
 	width: 100%;
 	height: 100vh;
 }
-
-/* ------------ */
-/* ICON STYLES */
 
 .icon-container {
 	position: absolute;
@@ -96,7 +93,7 @@ section {
 			rgb(75, 52, 159) 70%);
 }
 
-.testimonial {
+.board {
 	background-color: #f6c66e;
 	background-image: linear-gradient(30deg, #f6c66e 0%, rgb(168, 78, 22) 100%);
 }
@@ -114,9 +111,6 @@ section {
 			rgb(243, 151, 178) 0%,
 			rgb(147, 20, 58) 100%);
 }
-
-/* ------- */
-/* POPUP */
 
 body.prevent-background-scroll {
 	min-height: 100dvh;
@@ -225,12 +219,6 @@ body.prevent-background-scroll {
 	opacity: 1;
 }
 
-/* .button-container:hover i:hover,
-.button-container:hover i:hover:nth-child(2),
-.button-container:hover i:hover:nth-child(3) {
-opacity: 1;
-} */
-
 .red {
 	background-color: rgb(255, 96, 92);
 }
@@ -255,9 +243,6 @@ opacity: 1;
 	transform: rotate(90deg);
 }
 
-/* --------- */
-/* SCROLLBAR */
-
 .popup-body::-webkit-scrollbar {
 	width: 0.7rem;
 }
@@ -272,9 +257,6 @@ opacity: 1;
 	outline: none;
 	border-radius: 0.8rem;
 }
-
-/* ------ */
-/* ABOUT */
 
 .about-container {
 	display: grid;
@@ -311,21 +293,18 @@ opacity: 1;
 	transform: rotate(4deg) scale(1.25);
 }
 
-/* ------- */
-/* SKILLS */
-
-.skill-list {
+.skill-list, .projects-list {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 40px;
 }
 
-.skill-list h1 {
+.skill-list h1, .projects-list h1 {
 	text-align: center;
 	margin-bottom: 30px;
 }
 
-.skill-list ul {
+.skill-list ul, .projects-list ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -335,20 +314,14 @@ opacity: 1;
 	margin: 0 auto;
 }
 
-.skill-list ul li {
+.skill-list ul li, .projects-list ul li {
 	font-size: 1rem;
 	font-weight: 500;
 	border-radius: 5px;
-	background: linear-gradient(130deg,
-			rgba(124, 124, 124, 0.133) 0%,
-			rgba(144, 17, 180, 0.5) 100%);
 	backdrop-filter: blur(30px);
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	box-shadow: rgba(0, 0, 0, 0.142) 0px 3px 8px;
 	padding: 8px 12px;
 }
-
-/* --------- */
-/* PROJECTS */
 
 .project-container h1 {
 	text-align: center;
@@ -356,75 +329,14 @@ opacity: 1;
 	margin: 20px 0;
 }
 
-.all-projects {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	place-items: center;
-	gap: 30px;
-	padding: 30px;
+.projects-list a {
+	text-decoration: none;
+	color: white;
 }
 
-.all-projects img {
-	height: 200px;
-	object-fit: fill;
-	border-radius: 12px;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.project-box {
-	position: relative;
-}
-
-.overlay {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 200px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: rgba(89, 10, 98, 0.467);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid #000;
-	border-radius: 12px;
-	list-style: none;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.4s ease-in-out;
-}
-
-.overlay:hover {
-	opacity: 1;
-	backdrop-filter: blur(2px);
-}
-
-.overlay h3,
-.overlay button {
-	opacity: 0;
-	transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
-	transition: all 0.25s ease;
-	-webkit-transition: all 0.25s ease;
-}
-
-.overlay:hover h3,
-.overlay:hover button {
-	transform: translateY(0);
-	-webkit-transform: translateY(0);
-	opacity: 1;
-}
-
-.overlay:hover h3 {
-	transition-delay: 0.3s;
-	-webkit-transition-delay: 0.3s;
-}
-
-.overlay:hover button {
-	transition-delay: 0.5s;
-	-webkit-transition-delay: 0.5s;
+.projects-list a:hover {
+	text-decoration: underline;
+	color: white;
 }
 
 .more-btn {
@@ -466,10 +378,7 @@ opacity: 1;
 	color: #000;
 }
 
-/* ------------- */
-/* TESTIMONIALS */
-
-.testimonial-container h1 {
+.board-container h1 {
 	text-align: center;
 	margin-bottom: 40px;
 	user-select: none;
@@ -496,17 +405,12 @@ opacity: 1;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 	background: rgba(104, 104, 104, 0.5);
 	color: #fff;
-	outline: 0 solid rgba(168, 88, 225, 0.8);
 	border-radius: 15px;
 	padding: 20px 30px;
 	margin-bottom: 16px;
 	cursor: grab;
 	user-select: none;
 	transition: outline 0.3s linear;
-}
-
-.swiper-slide:hover {
-	outline: 1px solid rgba(141, 53, 161, 0.8);
 }
 
 .user-info {
@@ -521,8 +425,6 @@ opacity: 1;
 	border-radius: 50%;
 	object-fit: cover;
 	margin-bottom: 20px;
-	box-shadow: rgba(154, 88, 225, 0.8) 0px 10px 30px 0px,
-		rgba(225, 88, 218, 0.8) 0px 0px 0px 2px;
 }
 
 .user-info h2 {
@@ -535,8 +437,6 @@ opacity: 1;
 	font-weight: 400;
 	margin-top: 12px;
 }
-
-/* Control Buttons */
 
 .control {
 	display: flex;
@@ -552,7 +452,7 @@ opacity: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgba(187, 36, 237, 0.8);
+	background: rgba(98, 98, 98, 0.316);
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
 		inset 0px 4px 4px rgba(255, 255, 255, 0.2);
 	padding: 10px;
@@ -564,7 +464,7 @@ opacity: 1;
 }
 
 .control li:hover {
-	background: rgba(171, 26, 224, 0.8);
+	background: rgba(98, 98, 98, 0.601);
 	transform: scale(0.98);
 }
 
@@ -572,9 +472,6 @@ opacity: 1;
 	font-size: 1.8rem;
 	color: #fff;
 }
-
-/* -------- */
-/* CONTACT */
 
 .contact-container {
 	display: flex;
@@ -612,12 +509,6 @@ textarea {
 	border-radius: 4px;
 	margin: 10px 0 20px;
 	resize: vertical;
-}
-
-input[type="text"]:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-	border: 2px solid rgb(115, 58, 146);
 }
 
 input:-webkit-autofill,
